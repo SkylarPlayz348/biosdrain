@@ -184,6 +184,7 @@ static u32 dump_nvm_func()
 	{
 		if (sceCdReadNVM(i, (u16 *)dump_shared_buffer + i, &result) != 1 || result != 0)
 		{
+			FILE *test = fopen("mc0:/test.txt", 'wb')
 			return result;
 		}
 		
