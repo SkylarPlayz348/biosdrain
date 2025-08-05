@@ -192,7 +192,7 @@ static u32 dump_nvm_func()
 		}
 
 	}
-	if(sceCdWM(&model, &write_result) != 1 || write_result != 0)
+	if(sceCdWM(model, &write_result) != 1 || write_result != 0)
 		return write_result;
 	return 0;
 }
