@@ -182,7 +182,7 @@ static u32 dump_nvm_func()
 
 	u8 result;
 	u32 write_result;
-	char model[17];
+	char model;
 	strcpy(&model, "SPCH-35001");
 	for (u32 i = 0; i < 512; i++)
 	{
