@@ -15,6 +15,7 @@
 #include <loadfile.h>
 #include <sifrpc.h>
 #include <iopcontrol.h>
+#include <elf-loader.h>
 
 #include "sysman/sysinfo.h"
 #include "sysman_rpc.h"
@@ -196,5 +197,6 @@ exit_main:
 	menu_status("\n");
 	menu_status("Interested in PS2 development?\n");
 	menu_status("Check out fobes.dev!\n");
+	LoadELFFromFile("rom0:OSDSYS", NULL, NULL);
 	SleepThread();
 }

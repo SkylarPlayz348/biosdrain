@@ -21,7 +21,7 @@ jobs:
 
       - name: Increment our tag
         id: tag_version
-        uses: mathieudutour/github-tag-action@v6.0
+        uses: mathieudutour/github-tag-action@v6.2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           release_branches: master
@@ -47,4 +47,3 @@ jobs:
           files: |
             binaries/biosdrain.elf
           tag_name: ${{ steps.tag_version.outputs.new_tag }}
-

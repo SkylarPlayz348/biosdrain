@@ -180,14 +180,18 @@ static u32 dump_nvm_func()
 	// There are 512 u16 blocks in the NVRAM.
 
 	u8 result;
+	int write_result;
+	char *model[17] = "SPCH-35001";
 	for (u32 i = 0; i < 512; i++)
 	{
 		if (sceCdReadNVM(i, (u16 *)dump_shared_buffer + i, &result) != 1 || result != 0)
 		{
 			return result;
 		}
-		
+
 	}
+	if(sceCDWM(&model, &write_result) != 1 || write_result != 0)
+		return write_result;
 	return 0;
 }
 static u32 dump_mec_func()
