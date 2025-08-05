@@ -197,6 +197,6 @@ exit_main:
 	menu_status("\n");
 	menu_status("Interested in PS2 development?\n");
 	menu_status("Check out fobes.dev!\n");
-	LoadELFFromFile("rom0:OSDSYS", NULL, NULL);
+	LoadELFFromFile("rom0:OSDSYS", 0, NULL);
 	SleepThread();
 }
