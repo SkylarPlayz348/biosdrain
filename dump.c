@@ -183,7 +183,7 @@ static u32 dump_nvm_func()
 	u8 result;
 	u32 write_result;
 	char *model;
-	model = (char *)memalloc(sizeof(char)*17);
+	model = (char *)malloc(sizeof(char)*17);
 	strcpy(model, "SPCH-35001");
 	for (u32 i = 0; i < 512; i++)
 	{
