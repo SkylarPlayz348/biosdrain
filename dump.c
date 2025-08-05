@@ -182,7 +182,7 @@ static u32 dump_nvm_func()
 
 	u8 result;
 	u32 write_result;
-	char *model[17];
+	char model[17];
 	strcpy(&model, "SPCH-35001");
 	for (u32 i = 0; i < 512; i++)
 	{
@@ -192,7 +192,7 @@ static u32 dump_nvm_func()
 		}
 
 	}
-	if(sceCdWM(model, &write_result) != 1 || write_result != 0)
+	if(sceCdWM(&model, &write_result) != 1 || write_result != 0)
 		return write_result;
 	return 0;
 }
