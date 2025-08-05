@@ -182,8 +182,8 @@ static u32 dump_nvm_func()
 
 	u8 result;
 	u32 write_result;
-	char model;
-	strcpy(&model, "SPCH-35001");
+	char *model;
+	strcpy(model, "SPCH-35001");
 	for (u32 i = 0; i < 512; i++)
 	{
 		if (sceCdReadNVM(i, (u16 *)dump_shared_buffer + i, &result) != 1 || result != 0)
