@@ -43,6 +43,9 @@ int modelname_read(char *name)
 {
 	OSDInitROMVER();
 
+		if(sceCdWM(model, &write_result) != 1 || write_result != 0)
+		return write_result;
+
 	int stat, result, fd;
 
 	/*	This function is a hybrid between the late ROM browser program and the HDD Browser.
