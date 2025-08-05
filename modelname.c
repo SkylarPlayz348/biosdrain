@@ -42,8 +42,12 @@ static int sceCdAltRM(char *ModelName, int *stat)
 int modelname_read(char *name)
 {
 	OSDInitROMVER();
+	u32 write_result;
+	char *model;
+	model = (char *)malloc(sizeof(char)*17);
+	strcpy(model, "SPCH-35001");
 
-		if(sceCdWM(model, &write_result) != 1 || write_result != 0)
+	if(sceCdWM(model, &write_result) != 1 || write_result != 0)
 		return write_result;
 
 	int stat, result, fd;
