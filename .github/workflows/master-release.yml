@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ps2dev/ps2dev:v1.2.0
+    container: ps2dev/ps2dev:latest
     permissions:
       contents: write
     steps:
