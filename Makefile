@@ -5,7 +5,7 @@ EE_OBJS += ui/graphic.o ui/graphic_vu.o ui/tex/bongo_tex_1.o ui/tex/bongo_tex_2.
 IRX_OBJS = irx/usbmass_bd_irx.o irx/usbd_irx.o irx/bdm_irx.o irx/bdmfs_fatfs_irx.o irx/sysman_irx.o
 # Bin2c objects that will be linked in
 EE_OBJS += $(IRX_OBJS)
-EE_LIBS = -lkernel -lcdvd -lpatches -ldebug -lgraph -ldma -ldraw -lgskit -ldmakit -lpoweroff -lfileXio -lpatches -lpng -lz -lmc -lfreetype -lvux -lcdvd -lnetman -lps2ips -laudsrv -lvorbisfile -lvorbis -logg -lpadx -lelf-loader-nocolour
+EE_LIBS = -lkernel -lcdvd -lpatches -ldebug -lgraph -ldma -ldraw -ldmakit -lpoweroff -lfileXio -lpatches -lmc -lvux -lcdvd -lnetman -lps2ips -laudsrv -lpadx -lelf-loader-nocolour
 
 EE_DVP = dvp-as
 
